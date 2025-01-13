@@ -1,0 +1,21 @@
+// COLORS
+$color-dark: #0A0A0A;
+$color-light: #E6E6E6;
+$primary-color: #A5A5A5;
+$secondary-color: #646464;
+$accent-color: #532B88;
+
+// WIDTH
+$width-max: 100%;
+
+// Breakpoints 
+$breakpoints: (
+    xxs: 320px,
+    xs: 380px, 
+    s: 480px, 
+    m: 769px, 
+    l: 992px, 
+    xl: 1114px, 
+    xxl: 1280px, 
+    xxxl: 1500px,
+);

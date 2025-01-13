@@ -1,0 +1,306 @@
+// $width-bars-menu: 55px;
+
+.header {
+    padding: 10px;
+
+    @include media-breakpoint-down(s) {
+        padding-right: 0.5rem !important;
+    }
+
+    @include media-breakpoint-down(l) {
+        padding-right: 2rem;
+    }
+
+    @include media-breakpoint-down(xxxl) {
+        padding-left: 3rem;
+        width: $width-max !important;
+    }
+
+    .navbar {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-down(xxxl) {
+            width: $width-max !important;
+            flex-direction: row !important;
+        }
+
+        .brand {
+            text-align: center;
+
+            @include media-breakpoint-down(s) {
+                width: 50% !important;
+            }
+
+            @include media-breakpoint-down(xxxl) {
+                text-align: left;
+            }
+
+            img {
+                width: 60%;
+                margin-left: -2rem;
+
+                @include media-breakpoint-down(l) {
+                    width: 18% !important;
+                }
+
+                @include media-breakpoint-down(xxxl) {
+                    width: 22%;
+                }
+            }
+
+            .logo {
+                @include media-breakpoint-down(s) {
+                    width: 44% !important;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            width: 6%;
+            margin-top: -5px;
+            border: none !important;
+            background-color: transparent !important;
+
+            @include media-breakpoint-down(s) {
+                width: 24% !important;
+            }
+
+            @include media-breakpoint-down(l) {
+                width: 10%;
+            }
+
+            .toggler-icon {
+                .icon {
+                    padding: 8px;
+                    height: 1.3px;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 18px;
+                    background-color: $color-dark;
+
+                    &:not(:last-child) {
+                        margin-bottom: 2px;
+                    }
+                }
+
+                .first-icon {
+                    border: 2px solid $color-dark;
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        .menu {
+            transform: rotate(-90deg);
+            margin-top: 8rem;
+            margin-left: -2rem;
+            width: 100%;
+            flex-direction: row-reverse;
+
+            @include media-breakpoint-down(xxxl) {
+                margin-top: 0rem;
+                margin-left: 0rem;
+                transform: rotate(0deg) !important;
+                flex-direction: row;
+            }
+
+            .menu-nav {
+                background-color: transparent !important;
+                border-radius: 22px;
+                border: 1px solid black !important;
+                clip-path: polygon(0 0, 100% 0, 100% 77%, 75% 100%, 25% 100%, 0 77%);
+                padding: 1rem;
+
+                @include media-breakpoint-down(l) {
+                    width: 100%;
+                    position: fixed;
+                    z-index: 4 !important;
+                    left: -2px;
+                    clip-path: none !important;
+                    background-color: #0A0A0A !important;
+                    margin-top: 10px;
+
+                    @include media-breakpoint-down(s) {
+                        left: -4px;
+                    }
+
+                    .navbar-nav {
+                        padding: 5rem 2rem;
+
+                        .nav-link {
+                            color: $color-light !important;
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                color: $accent-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .navbar-nav {
+                margin-top: -6px;
+            }
+
+            .nav-link {
+                font-weight: 500;
+                font-size: 14px;
+                letter-spacing: 0.3px;
+                font-family: $font-subtitle;
+                transition: all 0.5s ease-in-out !important;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    font-weight: 600;
+                    transition: all 0.5s ease-in-out !important;
+                    color: $accent-color !important;
+                }
+            }
+
+            .button-lang {
+                margin-right: 8rem;
+                height: 5%;
+                margin-top: 0.5rem;
+                transform: rotate(90deg) !important;
+
+                @include media-breakpoint-down(l) {
+                    display: none;
+                }
+
+                @include media-breakpoint-down(xxxl) {
+                    margin-right: 2rem;
+                    margin-left: 2rem;
+                    transform: rotate(0deg) !important;
+                }
+
+                .a-lang {
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+}
+
+// .header {
+//     width: 6%;
+//     display: flex;
+//     padding: 1rem;
+//     align-items: center;
+//     flex-direction: column;
+
+//     @include media-breakpoint-down(xl) {
+//         justify-content: space-between;
+//         width: $width-max !important;
+//         flex-direction: row !important;
+//     }
+
+//     &__logo {
+//         margin-bottom: 20px;
+
+//         img {
+//             max-width: 70px;
+
+//             @include media-breakpoint-down(xxl) {
+//                 max-width: 90px;
+//             }
+//         }
+//     }
+
+//     &__menu-icon {
+//         display: none;
+
+//         @include media-breakpoint-down(l) {
+//             display: block !important;
+//             border: none !important;
+//             position: absolute;
+//             margin-top: -14px;
+//             right: 2rem;
+
+//             .menu-button {
+//                 border: none !important;
+//                 width: $width-bars-menu;
+
+//                 .icon-menu {
+//                     padding: 10px;
+//                     height: 2px;
+//                     display: flex;
+//                     width: $width-bars-menu;
+//                     flex-direction: column;
+//                     border-radius: 18px;
+//                     background-color: black;
+
+
+//                 }
+//                 .icon-first {
+
+//                     border: 2px solid black;
+//                     background-color: transparent;
+//                 }
+//             }
+//         }
+//     }
+
+//     &__nav {
+//         // margin: 10px;
+//         padding: 10px;
+//         top: 20rem;
+//         border-radius: 22px;
+//         position: relative;
+//         transform: rotate(-90deg);
+//         transform-origin: center;
+//         border: 1px solid black;
+
+//         @include media-breakpoint-down(l) {
+//             display: none !important;
+//             position: absolute;
+//             width: 100%;
+//             top: 4rem;
+//             left: 0;
+//             background-color: red;
+//             .active {
+//                 display: flex;
+//             }
+//         }
+
+//         @include media-breakpoint-down(xl) {
+//             top: -1rem !important;
+//             transform: rotate(0deg) !important;
+//         }
+
+//         @include media-breakpoint-down(xxxl) {
+//             margin-left: 1rem;
+//             top: 15rem;
+//         }
+
+//         ul {
+//             margin-top: 14px;
+//         }
+
+//         li {
+//             margin: 0px 10px;
+
+//             a {
+//                 font-size: 15px;
+//                 font-weight: 500;
+//                 font-family: $font-subtitle;
+
+//                 &:hover,
+//                 &:focus,
+//                 &:active {
+//                     color: $accent-color;
+//                 }
+//             }
+//         }
+//     }
+
+//     &__lang {
+//         left: 1rem;
+//         bottom: 1rem;
+//     }
+
+// }

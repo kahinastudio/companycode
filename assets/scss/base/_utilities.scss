@@ -1,0 +1,27 @@
+// TEXT
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+// BORDER
+.border-dark {
+    border: 1px solid $color-dark;
+}
+.border-b-dark {
+    border-bottom: 1px solid $color-dark;
+}
+
+// RADIUS
+.radius-18 {
+    border-radius: 18px;
+}
+
+// BACKGROUND
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+// Z-INDEX
+.z-index-3 {
+    z-index: 3;
+}

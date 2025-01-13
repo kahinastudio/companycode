@@ -1,0 +1,40 @@
+// Stroke 
+@mixin stroke-text ($stroke-color, $stroke-width: 2px) {
+    color: transparent;
+    font-weight: 600;
+    -webkit-text-stroke: $stroke-width $stroke-color;
+}
+
+// Mixin pour "media-breakpoint-up"
+@mixin media-breakpoint-up($breakpoint) {
+    $min-width: map-get($breakpoints, $breakpoint);
+
+    @if $min-width !=null {
+        @media (min-width: #{$min-width}) {
+            @content;
+        }
+    }
+}
+
+// Mixin pour "media-breakpoint-down"
+@mixin media-breakpoint-down($breakpoint) {
+    $max-width: map-get($breakpoints, $breakpoint);
+
+    @if $max-width !=null {
+        @media (max-width: #{$max-width}) {
+            @content;
+        }
+    }
+}
+
+// Mixin pour "media-breakpoint-between"
+@mixin media-breakpoint-between($lower, $upper) {
+    $min-width: map-get($breakpoints, $lower);
+    $max-width: map-get($breakpoints, $upper);
+
+    @if $min-width !=null and $max-width !=null {
+        @media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+            @content;
+        }
+    }
+}

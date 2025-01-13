@@ -1,0 +1,169 @@
+// Import of transformers police
+@font-face {
+    font-family: "Perfect Dark";
+    src: url("../../../company-code/assets/fonts/pdark/pdark.ttf") format("truetype");
+    font-style: normal;
+}
+
+// Import of orbitron police 
+@font-face {
+    font-family: "Orbitron";
+    src: url("../../../company-code/assets/fonts/orbitron/Orbitron-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../../../company-code/assets/fonts/orbitron/Orbitron-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../../../company-code/assets/fonts/orbitron/Orbitron-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../../../company-code/assets/fonts/orbitron/Orbitron-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../../../company-code/assets/fonts/orbitron/Orbitron-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../../../company-code/assets/fonts/orbitron/Orbitron-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+// Import of exo police 
+
+@font-face {
+    font-family: "Exo 2";
+    src: url("../../../company-code/assets/fonts/exo/Exo2-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url("../../../company-code/assets/fonts/exo/Exo2-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url("../../../company-code/assets/fonts/exo/Exo2-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url("../../../company-code/assets/fonts/exo/Exo2-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Fonts 
+$font-title: "Perfect Dark", sans-serif;
+$font-subtitle: "Orbitron", sans-serif;
+$font-text: "Exo 2", sans-serif;
+
+// Titles 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    width: $width-max;
+    word-wrap: break-word;
+    letter-spacing: 0.1rem;
+    font-family: $font-title;
+}
+
+h1 {
+    @include media-breakpoint-down(l) {
+        line-height: 5rem;
+        font-size: 5rem !important;
+    }
+
+    @include media-breakpoint-up(l) {
+        font-size: 6.5rem !important;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+        font-size: 10rem !important;
+        line-height: 9rem !important;
+    }
+}
+
+#h1 {
+    @include media-breakpoint-down(s) {
+        font-size: 3.2rem !important;
+        line-height: 4rem !important;
+    }
+}
+
+h2,
+h3,
+h4 {
+    line-height: 7rem;
+}
+
+h2,
+h3 {
+    @include media-breakpoint-down(s) {
+        font-size: 3rem !important;
+        line-height: 3rem !important;
+    }
+
+    @include media-breakpoint-down(l) {
+        font-size: 5.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 7rem !important;
+    }
+}
+
+// Subtitle
+.subtitle {
+    font-size: 1.3rem;
+    font-family: $font-subtitle;
+}
+
+// Text 
+p,
+a {
+    font-weight: 300;
+    font-family: $font-text;
+}
+
+strong {
+    font-weight: 800 !important;
+}
+
+// Copyright 
+.copyright {
+    font-size: 13px;
+    font-weight: 800;
+    color: $secondary-color;
+    font-family: $font-subtitle;
+}
+

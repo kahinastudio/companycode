@@ -1,0 +1,49 @@
+.introduction {
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../../company-code/assets/img/banner/banner-decor.png");
+
+    
+    @include media-breakpoint-down(s) {
+        height: 100vh !important;
+    }
+
+    @include media-breakpoint-down(l) {
+        height: 80vh;
+    }
+
+    img {
+        top: 0rem;
+        right: 0rem;
+        height: 100vh;
+        position: fixed;
+
+        @include media-breakpoint-down(s) {
+            overflow: hidden;
+            margin-right: -4rem;
+            height: 100vh !important;
+        }
+
+        @include media-breakpoint-down(l) {
+            height: 80vh;
+        }
+    }
+
+    h1 {
+        margin-top: 6rem;
+
+        @include media-breakpoint-down(s) {
+            margin-top: 3rem;
+        }
+
+        br {
+            @include media-breakpoint-down(s) {
+                display: none !important;
+            }
+        }
+    }
+}
