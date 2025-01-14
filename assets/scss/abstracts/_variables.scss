@@ -1,21 +1,103 @@
+// ==========================================================================
 // COLORS
+// ==========================================================================
 $color-dark: #0A0A0A;
 $color-light: #E6E6E6;
 $primary-color: #A5A5A5;
 $secondary-color: #646464;
 $accent-color: #532B88;
 
-// WIDTH
-$width-max: 100%;
+// Transparent
+$bg-transparent: transparent;
 
-// Breakpoints 
+// ==========================================================================
+// WIDTH
+// ==========================================================================
+$max-width: 100%;
+
+// ==========================================================================
+// BREAKPOINTS
+// ==========================================================================
 $breakpoints: (
     xxs: 320px,
-    xs: 380px, 
-    s: 480px, 
-    m: 769px, 
-    l: 992px, 
-    xl: 1114px, 
-    xxl: 1280px, 
+    xs: 380px,
+    s: 480px,
+    m: 769px,
+    l: 992px,
+    xl: 1114px,
+    xxl: 1280px,
     xxxl: 1500px,
 );
+
+// ==========================================================================
+// SPACING ( MARGIN & PADDING )
+// ==========================================================================
+
+// Spacing scale
+$spacing-none: 0rem;
+$spacing-xxxs: 0.5rem;
+$spacing-xxs: 1rem;
+$spacing-xs: 2rem;
+$spacing-s: 3rem;
+$spacing-m: 10rem;
+$spacing-lg: 12rem;
+
+// Specific spacing
+$section-padding-mobile: $spacing-m $spacing-xxs;
+$section-padding-desktop: $spacing-lg $spacing-none;
+
+// Specific components
+$navbar-padding-mobile: $spacing-xs;
+$navbar-padding-desktop: $spacing-xxxs $spacing-xxs;
+
+// ==========================================================================
+// DIRECTION
+// ==========================================================================
+$direction-row: row;
+$direction-column: column;
+$direction-row-reverse: row-reverse;
+
+// ==========================================================================
+// POSITION
+// ==========================================================================
+$position-fixed: fixed;
+
+// ==========================================================================
+// ANIMATIONS & EFFECTS
+// ==========================================================================
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-ease: $transition-property $transition-duration ease;
+$transition-ease-in-out: $transition-property $transition-duration ease-in-out;
+
+// ==========================================================================
+// BORDER
+// ==========================================================================
+$b-none: none;
+$border-thin: 1px;
+$border-style: solid;
+$border-dark: $border-thin $border-style $color-dark;
+$border-light: $border-thin $border-style $color-light;
+
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+$radius-12: 12px;
+$radius-18: 18px;
+$radius-24: 24px;
+
+// ==========================================================================
+// TEXT
+// ==========================================================================
+
+// Transform
+$uppercase: uppercase;
+
+// Align
+$text-justify: justify; 
+$text-left: left;
+
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+$padding-button: $spacing-xxxs $spacing-xxs;

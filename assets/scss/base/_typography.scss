@@ -1,11 +1,15 @@
-// Import of transformers police
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+// PERFECT DARK
 @font-face {
     font-family: "Perfect Dark";
     src: url("../../../company-code/assets/fonts/pdark/pdark.ttf") format("truetype");
     font-style: normal;
 }
 
-// Import of orbitron police 
+// ORBITRON
 @font-face {
     font-family: "Orbitron";
     src: url("../../../company-code/assets/fonts/orbitron/Orbitron-Regular.ttf") format("truetype");
@@ -48,8 +52,7 @@
     font-style: normal;
 }
 
-// Import of exo police 
-
+// EXO
 @font-face {
     font-family: "Exo 2";
     src: url("../../../company-code/assets/fonts/exo/Exo2-Thin.ttf") format("truetype");
@@ -78,12 +81,16 @@
     font-style: normal;
 }
 
-// Fonts 
+// ==========================================================================
+// CODES TYPOS
+// ==========================================================================
 $font-title: "Perfect Dark", sans-serif;
 $font-subtitle: "Orbitron", sans-serif;
 $font-text: "Exo 2", sans-serif;
 
-// Titles 
+// ==========================================================================
+// TITLES
+// ==========================================================================
 
 h1,
 h2,
@@ -91,9 +98,8 @@ h3,
 h4,
 h5,
 h6 {
-    width: $width-max;
+    width: $max-width;
     word-wrap: break-word;
-    letter-spacing: 0.1rem;
     font-family: $font-title;
 }
 
@@ -142,13 +148,17 @@ h3 {
     }
 }
 
-// Subtitle
+// ==========================================================================
+// SUBTITLE
+// ==========================================================================
 .subtitle {
     font-size: 1.3rem;
     font-family: $font-subtitle;
 }
 
-// Text 
+// ==========================================================================
+// TEXT
+// ==========================================================================
 p,
 a {
     font-weight: 300;
@@ -159,11 +169,12 @@ strong {
     font-weight: 800 !important;
 }
 
-// Copyright 
+// ==========================================================================
+// COPYRIGHT
+// ==========================================================================
 .copyright {
     font-size: 13px;
     font-weight: 800;
     color: $secondary-color;
     font-family: $font-subtitle;
 }
-

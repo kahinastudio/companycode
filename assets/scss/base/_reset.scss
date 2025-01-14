@@ -8,15 +8,15 @@
 
 body {
     img {
-        width: 100%;
+        width: $max-width;
         object-fit: cover;
     }
 
     section {
-        padding: 12rem 0rem;
+        padding: $section-padding-desktop;
 
         @include media-breakpoint-down(s) {
-            padding: 12rem 1rem;
+            padding: $section-padding-mobile;
         }
     }
 }

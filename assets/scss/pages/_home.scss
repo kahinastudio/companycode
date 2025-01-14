@@ -7,13 +7,19 @@
     background-size: cover;
     background-image: url("../../../company-code/assets/img/banner/banner-decor.png");
 
-    
-    @include media-breakpoint-down(s) {
-        height: 100vh !important;
+    &:hover {
+        img {
+            filter: brightness(1.2) contrast(1.5);
+        }
     }
 
     @include media-breakpoint-down(l) {
-        height: 80vh;
+        height: 100vh !important;
+        background-attachment: scroll;
+    }
+
+    @include media-breakpoint-down(xl) {
+        height: 130vh;
     }
 
     img {
@@ -21,29 +27,53 @@
         right: 0rem;
         height: 100vh;
         position: fixed;
+        filter: brightness(1) contrast(1.2);
+        transition: filter 0.5s ease-out;
 
         @include media-breakpoint-down(s) {
-            overflow: hidden;
-            margin-right: -4rem;
-            height: 100vh !important;
+            right: -4rem !important;
+            height: 80vh !important;
         }
 
         @include media-breakpoint-down(l) {
-            height: 80vh;
+            right: -10rem;
+            overflow: hidden;
         }
     }
 
     h1 {
         margin-top: 6rem;
 
+        @include media-breakpoint-down(xs) {
+            margin-top: 0rem !important;
+        }
+
         @include media-breakpoint-down(s) {
             margin-top: 3rem;
         }
 
+        @include media-breakpoint-down(l) {
+            line-height: 9rem;
+            font-size: 10rem !important;
+        }
+
         br {
-            @include media-breakpoint-down(s) {
+            @include media-breakpoint-down(l) {
                 display: none !important;
             }
         }
+    }
+
+    .brand-name {
+        @include media-breakpoint-down(s) {
+            line-height: 5rem !important;
+            font-size: 5rem !important;
+        }
+    }
+}
+
+#introduction {
+    @include media-breakpoint-down(s) {
+        height: 80vh !important;
     }
 }
