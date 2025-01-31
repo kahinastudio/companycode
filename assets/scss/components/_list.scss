@@ -1,0 +1,38 @@
+.list {
+    ul {
+        li {
+
+            @include media-breakpoint-down(s) {
+                padding: 2rem !important;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $primary-color;
+
+                a {
+                    margin-left: 1rem;
+                }
+            }
+
+            &:nth-child(1) {
+                @include media-breakpoint-down(l) {
+                    border-top: $border-light;
+                }
+            }
+
+            &:not(:last-child) {
+                border-bottom: $border-light;
+            }
+
+            a {
+                transition: $transition-ease-in-out !important;
+
+                @include media-breakpoint-down(s) {
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+}

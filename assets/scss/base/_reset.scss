@@ -12,11 +12,40 @@ body {
         object-fit: cover;
     }
 
+    main,
+    .footer,
+    .body-lines {
+        margin: 0 4.75rem;
+
+        @include media-breakpoint-down(s) {
+            margin: 0 1rem !important;
+        }
+        
+        @include media-breakpoint-down(l) {
+            margin: 0 2.15rem;
+        }
+    }
+
+    .body-lines {
+        min-height: 100vh;
+        width: 1px;
+        position: fixed;
+        background-color: $color-light;
+    }
+
+    .body-line-left {
+        left: 0;
+    }
+
+    .body-line-right {
+        right: 0;
+    }
+
     section {
         padding: $section-padding-desktop;
 
         @include media-breakpoint-down(s) {
-            padding: $section-padding-mobile;
+            padding: $section-padding-mobile !important;
         }
     }
 }

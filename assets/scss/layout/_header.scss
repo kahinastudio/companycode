@@ -1,151 +1,46 @@
+$clip-header: polygon(0% 0%, 100% 0%, 100% 0%, 100% 0%, 96% 100%, 4% 101%, 4% 100%, 1% 26%);
+
 .header {
-    padding: 10px;
-
-    @include media-breakpoint-down(s) {
-        padding-left: $spacing-xxs !important;
-        padding-right: $spacing-xxs !important;
-    }
-
-    @include media-breakpoint-down(l) {
-        padding-right: $spacing-xs;
-    }
-
-    @include media-breakpoint-down(xxxl) {
-        padding-left: $spacing-s;
-        width: $max-width !important;
-    }
+    z-index: 10;
+    height: 80px;
+    padding: 0 1px;
+    width: $max-width;
+    clip-path: $clip-header;
 
     .navbar {
-        width: 15%;
-        flex-direction: $direction-column;
+        height: 79px;
+        background-color: $color-dark;
+        clip-path: $clip-header;
 
-        @include media-breakpoint-down(xxxl) {
-            width: $max-width !important;
-            flex-direction: $direction-row !important;
-        }
-
-        .brand {
-            width: 80%;
-            @include media-breakpoint-down(s) {
-                width: 50% !important;
-            }
-
-            @include media-breakpoint-down(xxxl) {
-                text-align: $text-left !important;
-            }
-
-            img {
-                @include media-breakpoint-down(l) {
-                    width: 18% !important;
-                }
-
-                @include media-breakpoint-down(xxxl) {
-                    width: 22%;
-                }
-            }
-
-            .logo {
-                @include media-breakpoint-down(s) {
-                    width: 44% !important;
-                }
-            }
-        }
-
-        .navbar-toggler {
-            width: 6%;
-            margin-top: -5px;
+        .container-fluid {
+            margin: -7px 6rem 0 6rem;
 
             @include media-breakpoint-down(s) {
-                width: 17% !important;
-                margin-top: -1rem;
+                margin: -7px 2rem 0 2rem !important;
             }
 
-            @include media-breakpoint-down(l) {
+            .navbar-brand {
                 width: 10%;
-            }
 
-            .toggler-icon {
-                .icon {
-                    padding: 8px;
-                    height: 1.3px;
-                    flex-direction: $direction-column;
-
-                    &:not(:last-child) {
-                        margin-bottom: 2px;
-                    }
+                @include media-breakpoint-down(s) {
+                    width: 50% !important;
+                }
+        
+                .logo {
+                    width: 16%;
                 }
             }
-        }
 
-        .menu {
-            margin-top: 6rem;
-            width: $max-width;
-            transform: rotate(-90deg);
-            flex-direction: $direction-row-reverse;
-
-            @include media-breakpoint-down(xxxl) {
-                margin-top: $spacing-none;
-                margin-left: $spacing-none;
-                transform: rotate(0deg) !important;
-                flex-direction: $direction-row;
-            }
-
-            .menu-nav {
-                transform: skew(-15deg);
-
-                @include media-breakpoint-down(l) {
-                    width: $max-width;
-                    margin-top: 10px;
-                    z-index: 4 !important;
-                    position: $position-fixed;
-                    transform: skew(0deg) !important;
-                    background-color: $color-dark !important;
-                }
-
-                .navbar-nav {
-                    padding: $navbar-padding-desktop;
-
-                    @include media-breakpoint-down(l) {
-                        padding: $navbar-padding-mobile;
-                    }
-
-                    .nav-item {
-                        .nav-link {
-                            font-size: 13px;
-                            font-weight: 500;
-                            letter-spacing: 0.3px;
-                            font-family: $font-subtitle;
-                            transition: $transition-ease-in-out !important;
-
-                            @include media-breakpoint-down(l) {
-                                color: $color-light !important;
-                            }
-
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                font-weight: 700;
-                                padding-left: $spacing-xs;
-                                color: $accent-color !important;
-                            }
-                        }
-                    }
+            .navbar-nav {
+                .nav-link,
+                .dropdown-item {
+                    @include nav-link;
+    
                 }
             }
 
             .button-lang {
-                margin-right: 10rem;
-                transform: rotate(90deg) !important;
-
-                @include media-breakpoint-down(l) {
-                    display: none;
-                }
-
-                @include media-breakpoint-down(xxxl) {
-                    margin-right: $spacing-xs;
-                    margin-left: $spacing-xs;
-                    transform: rotate(0deg) !important;
-                }
+                padding: 0rem !important;
             }
         }
     }

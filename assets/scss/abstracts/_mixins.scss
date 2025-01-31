@@ -1,9 +1,6 @@
-// Stroke 
-@mixin stroke-text ($stroke-color, $stroke-width: 2px) {
-    color: transparent;
-    font-weight: 600;
-    -webkit-text-stroke: $stroke-width $stroke-color;
-}
+// ==========================================================================
+// RESPONSIVE
+// ==========================================================================
 
 // Mixin pour "media-breakpoint-up"
 @mixin media-breakpoint-up($breakpoint) {
@@ -36,5 +33,23 @@
         @media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
             @content;
         }
+    }
+}
+
+// ==========================================================================
+// NAVBAR
+// ==========================================================================
+
+@mixin nav-link {
+    font-size: 0.8rem;
+    color: $color-light;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-transform: $uppercase !important;
+    font-family: $font-subtitle !important;
+    transition: $transition-ease-in-out !important;
+
+    @include media-breakpoint-down(s) {
+        font-size: 2rem !important;
     }
 }

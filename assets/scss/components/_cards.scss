@@ -1,0 +1,75 @@
+.card {
+    border: none;
+    transition: $transition-ease-in-out !important;
+}
+
+.card-project {
+
+    &:hover,
+    &:focus,
+    &:active {
+        padding: 1rem;
+
+        img {
+            opacity: 0.6;
+        }
+
+        .btn-project,
+        .content-project {
+            opacity: 1;
+        }
+    }
+
+    .btn-project,
+    .content-project {
+        opacity: 0;
+    }
+
+    .btn-project {
+        z-index: 3;
+        margin-top: 2rem;
+        margin-left: 2.2rem;
+
+        @include media-breakpoint-down(s) {
+            margin-left: 1rem !important;
+        }
+    }
+
+    img {
+        height: 700px;
+
+        @include media-breakpoint-down(s) {
+            height: 480px !important;
+        }
+    }
+
+    .content-project {
+        bottom: 0rem;
+        margin-left: -14px;
+        position: absolute;
+    }
+}
+
+// .card-futuristic {
+
+//     &::after,
+//     &::before {
+//         content: '';
+//         top: 80px;
+//         position: $position-absolute;
+//         width: 20px;
+//         background: $color-light;
+//         z-index: 1;
+//         height: 50%;
+//         transform: skewY(-45deg);
+//     }
+
+//     &::before {
+//         left: -10px;
+//     }
+
+//     &::after {
+//         right: -10px;
+//         transform: skewY(45deg);
+//     }
+// }

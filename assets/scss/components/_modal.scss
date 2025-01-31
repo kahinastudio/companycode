@@ -1,0 +1,38 @@
+$width-flag: 20px;
+$height-flag: 20px;
+$margin-flag: 5px;
+
+.flag {
+    width: $width-flag;
+    height: $height-flag;
+    margin-right: $margin-flag;
+}
+
+.btn-modal,
+.button-close,
+.modal-header,
+.modal-body {
+    padding: 0rem !important;
+}
+
+.modal {
+    .modal-header {
+        h4 {
+            font-size: 16px;
+        }
+    }
+
+    .modal-body {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $color-dark;
+                font-family: $font-text;
+                background-color: transparent !important;
+            }
+        }
+    }
+}

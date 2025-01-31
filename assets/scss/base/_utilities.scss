@@ -7,6 +7,18 @@
 }
 
 // ==========================================================================
+// COLORS
+// ==========================================================================
+
+.accent-color {
+    color: $accent-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}
+
+// ==========================================================================
 // BORDER
 // ==========================================================================
 
@@ -18,6 +30,25 @@
     border: $border-dark;
 }
 
+.border-light {
+    border: $border-light !important;
+}
+
+.border-t-light {
+    border-top: $border-light;
+}
+
+.border-b-light {
+    border-bottom: $border-light;
+}
+
+.border-l-light {
+    border-left: $border-light;
+}
+.border-r-light {
+    border-right: $border-light;
+}
+
 .border-b-dark {
     border-bottom: $border-dark;
 }
@@ -25,6 +56,10 @@
 // ==========================================================================
 // Z-INDEX
 // ==========================================================================
+
+.z-index-1 {
+    z-index: 1;
+}
 
 .z-index-3 {
     z-index: 3;
@@ -52,4 +87,76 @@
 
 .text-uppercase {
     text-transform: $uppercase;
+}
+
+.text-justify {
+    text-align: $text-justify !important;
+}
+
+// ==========================================================================
+// BANNER
+// ==========================================================================
+
+.banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @include media-breakpoint-down(l) {
+        background-attachment: scroll !important;
+    }
+}
+
+// ==========================================================================
+// HEIGHT
+// ==========================================================================
+
+.h-100 {
+    min-height: 100vh;
+}
+
+// ==========================================================================
+// IMAGE
+// ==========================================================================
+
+.max-width {
+    width: $max-width;
+}
+
+.brighter {
+    transition: filter 0.5s ease-out;
+    filter: brightness(1) contrast(1.2);
+}
+
+.im-brighter {
+    &:hover {
+        .brighter {
+            filter: brightness(1.2) contrast(1.5);
+        }
+    }
+}
+
+// ==========================================================================
+// SPACING
+// ==========================================================================
+
+.px-5 {
+    @include media-breakpoint-down(s) {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+}
+
+.p-5 {
+    @include media-breakpoint-down(s) {
+        padding: 3rem 2rem !important;
+    }
+}
+
+// ==========================================================================
+// DIRECTION
+// ==========================================================================
+
+.fl-col {
+    flex-direction: column !important;
 }

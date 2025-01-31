@@ -1,4 +1,7 @@
+// ==========================================================================
 // BACKGROUND
+// ==========================================================================
+
 .bg-light {
     background-color: $color-light !important;
 }
@@ -7,11 +10,14 @@
     background-color: $color-dark !important;
 }
 
+// ==========================================================================
 // COLORS
-.color-dark {
+// ==========================================================================
+
+.text-dark {
     color: $color-dark !important;
 }
 
-.color-light {
+.text-light {
     color: $color-light !important;
 }

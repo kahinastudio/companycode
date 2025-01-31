@@ -1,0 +1,19 @@
+.footer {
+    h5 {
+        font-size: 1rem !important;
+    }
+
+    p,
+    a {
+        font-size: 1rem !important;
+    }
+
+    .col-footer {
+        @include media-breakpoint-down(s) {
+            &:not(:last-child) {
+                border-right: none !important;
+                border-bottom: $border-light !important;
+            }
+        }
+    }
+}

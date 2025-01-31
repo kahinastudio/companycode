@@ -1,79 +1,46 @@
 .introduction {
-    height: 100vh;
-    position: relative;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../../../company-code/assets/img/banner/banner-decor.png");
-
-    &:hover {
-        img {
-            filter: brightness(1.2) contrast(1.5);
-        }
-    }
+    background-position: top center;
+    background-image: url("../../../company-code/assets/img/banner/home/home_hero_woman.png");
 
     @include media-breakpoint-down(l) {
-        height: 100vh !important;
-        background-attachment: scroll;
-    }
-
-    @include media-breakpoint-down(xl) {
-        height: 130vh;
-    }
-
-    img {
-        top: 0rem;
-        right: 0rem;
-        height: 100vh;
-        position: fixed;
-        filter: brightness(1) contrast(1.2);
-        transition: filter 0.5s ease-out;
-
-        @include media-breakpoint-down(s) {
-            right: -4rem !important;
-            height: 80vh !important;
-        }
-
-        @include media-breakpoint-down(l) {
-            right: -10rem;
-            overflow: hidden;
-        }
+        height: 90vh;
+        background-position: bottom;
     }
 
     h1 {
-        margin-top: 6rem;
-
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(s) {
             margin-top: 0rem !important;
         }
 
-        @include media-breakpoint-down(s) {
-            margin-top: 3rem;
-        }
-
         @include media-breakpoint-down(l) {
-            line-height: 9rem;
-            font-size: 10rem !important;
-        }
-
-        br {
-            @include media-breakpoint-down(l) {
-                display: none !important;
-            }
-        }
-    }
-
-    .brand-name {
-        @include media-breakpoint-down(s) {
-            line-height: 5rem !important;
-            font-size: 5rem !important;
+            margin-top: 5rem;
         }
     }
 }
 
-#introduction {
+.about,
+.services {
     @include media-breakpoint-down(s) {
-        height: 80vh !important;
+        padding: 0rem !important;
+    }
+
+    img {
+        @include media-breakpoint-down(l) {
+            margin-bottom: 2rem !important;
+        }
+    }
+
+    .content {
+        @include media-breakpoint-down(l) {
+            padding: 2rem !important;
+        }
+    }
+}
+
+.intro-contact {
+    .content {
+        @include media-breakpoint-down(s) {
+            padding: 2rem 0 !important;
+        }
     }
 }

@@ -1,0 +1,32 @@
+.moving {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    width: $max-width;
+    padding: 3rem 0rem !important;
+
+    .moving-inner {
+        white-space: nowrap;
+        display: flex;
+        animation: moving 18s linear infinite;
+
+        .moving-text {
+            font-size: 1.6rem;
+            color: $color-light !important;
+            i {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+@keyframes moving {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
